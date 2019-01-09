@@ -22,7 +22,7 @@ namespace NorthwindWeb.Pages
         {
             ViewData["Title"] = "Northwind Web Site- Suppliers";
             // Suppliers = new[] { "Alpha Co", "Smart Limited", "Gammatox" };
-            Customers = db.Customers.GroupBy(p=>p.Country).Select(s => s.CompanyName).ToArray();
+            Customers = db.Customers.Select(s => s.CompanyName).ToArray();
         }
     }
 }
